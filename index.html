@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Solution & Creative Hub - Solusi Digital, ATK & Kafe</title>
+    <!-- Favicon (SVG Data URI prevents 404) -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-info">
+                <span><i class="fa-solid fa-location-dot"></i> Jl. Adhyaksa No.02, Banjarmasin Utara</span>
+                <span class="divider">|</span>
+                <span><i class="fa-solid fa-clock"></i> Buka Setiap Hari: 08:00 - 22:00 WITA</span>
+            </div>
+            <div class="top-social">
+                <a href="#lokasi" class="top-link"><i class="fa-brands fa-whatsapp"></i> Chat Support</a>
+                <span class="badge-status"><span class="pulse-dot"></span> Buka Sekarang</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-microchip"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="brand-name">IT SOLUTION<span class="highlight">.</span></span>
+                    <span class="brand-sub">Creative & Service Hub</span>
+                </div>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-item active">Home</a>
+                <a href="#it-solution" class="nav-item">IT Solution</a>
+                <a href="#atk" class="nav-item">ATK</a>
+                <a href="#makanan-minuman" class="nav-item">Makanan & Minuman</a>
+                <a href="#dokumentasi" class="nav-item">Dokumentasi</a>
+                <a href="#lokasi" class="nav-item">Lokasi</a>
+                <div class="mobile-nav-cta">
+                    <button class="btn btn-primary btn-sm" onclick="openOrderModal('Konsultasi Umum')">
+                        <i class="fa-brands fa-whatsapp"></i> Pesan Cepat
+                    </button>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <button class="cart-btn" id="openCartBtn" title="Keranjang Pesanan">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="btn btn-primary btn-sm nav-cta" onclick="openOrderModal('Konsultasi Layanan')">
+                    <i class="fa-brands fa-whatsapp"></i> Hubungi Kami
+                </button>
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-bg-glow glow-1"></div>
+        <div class="hero-bg-glow glow-2"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-bolt"></i> One-Stop IT Solution & Office Needs
+                </div>
+                <h1 class="hero-title">
+                    Layanan Teknologi & Kreatif <br>
+                    <span class="text-gradient">Profesional, Cepat & Terpercaya</span>
+                </h1>
+                <p class="hero-desc">
+                    Mulai dari pembuatan web modern, desain grafis, editing multimedia, servis laptop/PC, print & jilid,
+                    hingga perlengkapan ATK dan sajian makanan & minuman untuk menemani harimu di Banjarmasin.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#it-solution" class="btn btn-primary">
+                        <i class="fa-solid fa-compass"></i> Eksplor Layanan
+                    </a>
+                    <a href="#lokasi" class="btn btn-outline">
+                        <i class="fa-solid fa-location-arrow"></i> Kunjungi Outlet
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>10+</h3>
+                        <p>Layanan IT & Kreatif</p>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>Garansi Pengerjaan</p>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <h3>Banjarmasin</h3>
+                        <p>Lokasi Strategis</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-card-preview">
+                <div class="glass-card main-preview-card">
+                    <div class="card-header-chip">
+                        <span class="chip-dot"></span>
+                        <span>IT Solution Center Active</span>
+                    </div>
+                    <div class="preview-hero-icon">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3>Layanan Cepat Terintegrasi</h3>
+                    <p>Solusi komprehensif bagi pelajar, mahasiswa, instansi pemerintah, dan UMKM di Banjarmasin.</p>
+
+                    <div class="quick-service-list">
+                        <div class="q-service-item">
+                            <i class="fa-solid fa-globe"></i>
+                            <span>Web Sederhana</span>
+                        </div>
+                        <div class="q-service-item">
+                            <i class="fa-solid fa-pen-nib"></i>
+                            <span>Desain & Print</span>
+                        </div>
+                        <div class="q-service-item">
+                            <i class="fa-solid fa-wrench"></i>
+                            <span>Servis Laptop/PC</span>
+                        </div>
+                        <div class="q-service-item">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            <span>ATK & Cafe</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-cta-banner">
+                        <span>Pengerjaan Cepat & Bergaransi</span>
+                        <a href="#it-solution" class="btn-text">Lihat Semua <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IT Solution Section -->
+    <section class="section it-solution-section" id="it-solution">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-badge">Layanan Unggulan</span>
+                <h2 class="section-title">IT Solution & Service Center</h2>
+                <p class="section-subtitle">Pilih layanan digital online sesuai kebutuhan Anda atau kunjungi toko kami
+                    untuk layanan langsung di tempat.</p>
+            </div>
+
+            <!-- Filter Tabs for Services -->
+            <div class="service-tabs">
+                <button class="tab-btn active" data-service-target="all">
+                    <i class="fa-solid fa-layer-group"></i> Semua Layanan
+                </button>
+                <button class="tab-btn" data-service-target="online">
+                    <i class="fa-solid fa-cloud-arrow-up"></i> Jasa Online
+                </button>
+                <button class="tab-btn" data-service-target="offline">
+                    <i class="fa-solid fa-screwdriver-wrench"></i> Menyediakan Jasa (Langsung)
+                </button>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="services-grid" id="servicesGrid">
+
+                <!-- Jasa Online 1: Web Sederhana -->
+                <div class="service-card" data-category="online">
+                    <div class="service-badge online-badge"><i class="fa-solid fa-globe"></i> Jasa Online</div>
+                    <div class="service-icon-box">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="service-title">Web Sederhana</h3>
+                    <p class="service-desc">Pembuatan website profil usaha, landing page promosi, portofolio pribadi,
+                        atau katalog digital yang responsif di HP & PC.</p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-check"></i> Desain Modern & Clean</li>
+                        <li><i class="fa-solid fa-check"></i> Mobile Friendly / Responsif</li>
+                        <li><i class="fa-solid fa-check"></i> Integrasi Tombol WhatsApp</li>
+                    </ul>
+                    <div class="service-card-action">
+                        <button class="btn btn-primary btn-full"
+                            onclick="openOrderModal('Web Sederhana', 'Jasa Online')">
+                            <i class="fa-solid fa-paper-plane"></i> Pesan Jasa Ini
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Jasa Online 2: Desain Grafis -->
+                <div class="service-card" data-category="online">
+                    <div class="service-badge online-badge"><i class="fa-solid fa-paintbrush"></i> Jasa Online</div>
+                    <div class="service-icon-box">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h3 class="service-title">Desain Grafis</h3>
+                    <p class="service-desc">Layanan pembuatan desain visual kreatif untuk poster acara, banner promosi,
+                        feeds media sosial, kartu nama, hingga logo usaha.</p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-check"></i> Kualitas HD & Siap Cetak</li>
+                        <li><i class="fa-solid fa-check"></i> Revisi Sesuai Arahan</li>
+                        <li><i class="fa-solid fa-check"></i> Format Lengkap (PNG/JPG/PDF)</li>
+                    </ul>
+                    <div class="service-card-action">
+                        <button class="btn btn-primary btn-full"
+                            onclick="openOrderModal('Desain Grafis', 'Jasa Online')">
+                            <i class="fa-solid fa-paper-plane"></i> Pesan Jasa Ini
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Jasa Online 3: Pengetikan -->
+                <div class="service-card" data-category="online">
+                    <div class="service-badge online-badge"><i class="fa-solid fa-keyboard"></i> Jasa Online</div>
+                    <div class="service-icon-box">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+                    <h3 class="service-title">Pengetikan</h3>
+                    <p class="service-desc">Bantuan ketik dokumen cepat, penulisan makalah, skripsi, input data tabel
+                        Excel, transkrip audio, dan konversi PDF ke Word.</p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-check"></i> Pengerjaan Rapi & Teliti</li>
+                        <li><i class="fa-solid fa-check"></i> Format Standar Akademik / Kantor</li>
+                        <li><i class="fa-solid fa-check"></i> Bisa Kirim File via WA / Email</li>
+                    </ul>
+                    <div class="service-card-action">
+                        <button class="btn btn-primary btn-full" onclick="openOrderModal('Pengetikan', 'Jasa Online')">
+                            <i class="fa-solid fa-paper-plane"></i> Pesan Jasa Ini
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Jasa Online 4: Fotografi -->
+                <div class="service-card" data-category="online">
+                    <div class="service-badge online-badge"><i class="fa-solid fa-camera"></i> Jasa Online</div>
+                    <div class="service-icon-box">
+                        <i class="fa-solid fa-camera-retro"></i>
+                    </div>
+                    <h3 class="service-title">Fotografi</h3>
+                    <p class="service-desc">Layanan sesi foto produk katalog online, pas foto formal rapi, foto
+                        dokumentasi kegiatan, dan potret personal di area Banjarmasin.</p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-check"></i> Kamera & Pencahayaan Pro</li>
+                        <li><i class="fa-solid fa-check"></i> Termasuk Seleksi & Editing Awal</li>
+                        <li><i class="fa-solid fa-check"></i> Akses Drive Berkas Lengkap</li>
+                    </ul>
+                    <div class="service-card-action">
+                        <button class="btn btn-primary btn-full" onclick="openOrderModal('Fotografi', 'Jasa Online')">
+                            <i class="fa-solid fa-paper-plane"></i> Pesan Jasa Ini
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Jasa Online 5: Editing Vidio -->
+                <div class="service-card" data-category="online">
+                    <div class="service-badge online-badge"><i class="fa-solid fa-film"></i> Jasa Online</div>
+                    <div class="service-icon-box">
+                        <i class="fa-solid fa-video"></i>
+                    </div>
+                    <h3 class="service-title">Editing Vidio</h3>
+                    <p class="service-desc">Editing video kreatif untuk konten TikTok, Instagram Reels, YouTube, tugas
+                        sekolah/kuliah, video perpisahan, dan cinematic.</p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-check"></i> Cut to beat & Transisi Mulus</li>
+                        <li><i class="fa-solid fa-check"></i> Sound Effect & Musik Bebas Copyright</li>
+                        <li><i class="fa-solid fa-check"></i> Teks Subtitle Dinamis</li>
+                    </ul>
+                    <div class="service-card-action">
+                        <button class="btn btn-primary btn-full"
+                            onclick="openOrderModal('Editing Vidio', 'Jasa Online')">
+                            <i class="fa-solid fa-paper-plane"></i> Pesan Jasa Ini
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Jasa Online 6: Editing Foto -->
+                <div class="service-card" data-category="online">
+                    <div class="service-badge online-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Jasa Online
+                    </div>
+                    <div class="service-icon-box">
+                        <i class="fa-solid fa-image"></i>
+                    </div>
+                    <h3 class="service-title">Editing Foto</h3>
+                    <p class="service-desc">Jasa retouch wajah, ganti warna latar belakang (background merah/biru pas
+                        foto), restorasi foto lama, dan color grading estetis.</p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-check"></i> Hasil Natural & Resolusi Tajam</li>
+                        <li><i class="fa-solid fa-check"></i> Ubah Pakaian Jas / Kemeja Pas Foto</li>
+                        <li><i class="fa-solid fa-check"></i> Pengerjaan Kilat hitungan jam</li>
+                    </ul>
+                    <div class="service-card-action">
+                        <button class="btn btn-primary btn-full"
+                            onclick="openOrderModal('Editing Foto', 'Jasa Online')">
+                            <i class="fa-solid fa-paper-plane"></i> Pesan Jasa Ini
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Jasa Online 7: Instal Ulang (Remote / Online) -->
+                <div class="service-card" data-category="online">
+                    <div class="service-badge online-badge"><i class="fa-solid fa-arrows-rotate"></i> Jasa Online</div>
+                    <div class="service-icon-box">
+                        <i class="fa-solid fa-rotate"></i>
+                    </div>
+                    <h3 class="service-title">Instal Ulang (Remote)</h3>
+                    <p class="service-desc">Panduan instal ulang sistem operasi, perbaikan error driver, aktivasi
+                        software esensial, dan pembersihan virus jarak jauh via remote software.</p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-check"></i> Praktis Tanpa Keluar Rumah</li>
+                        <li><i class="fa-solid fa-check"></i> Dipandu Teknisi Berpengalaman</li>
+                        <li><i class="fa-solid fa-check"></i> Solusi Driver & Aplikasi Lengkap</li>
+                    </ul>
+                    <div class="service-card-action">
+                        <button class="btn btn-primary btn-full"
+                            onclick="openOrderModal('Instal Ulang (Remote)', 'Jasa Online')">
+                            <i class="fa-solid fa-paper-plane"></i> Pesan Jasa Ini
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Jasa Offline 1: Konsultasi Laptop/PC -->
+                <div class="service-card highlight-card" data-category="offline">
+                    <div class="service-badge offline-badge"><i class="fa-solid fa-shop"></i> Layanan Di Tempat</div>
+                    <div class="service-icon-box">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3 class="service-title">Konsultasi Laptop / PC</h3>
+                    <p class="service-desc">Pengecekan kerusakan hardware, konsultasi rencana upgrade SSD / RAM,
+                        optimasi performa lambat, dan rekomendasi spek rakitan PC.</p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-check"></i> Diagnosa Cepat & Transparan</li>
+                        <li><i class="fa-solid fa-check"></i> Konsultasi Sesuai Anggaran</li>
+                        <li><i class="fa-solid fa-check"></i> Teknisi Ramah & Berpengalaman</li>
+                    </ul>
+                    <div class="service-card-action">
+                        <button class="btn btn-primary btn-full"
+                            onclick="openOrderModal('Konsultasi Laptop/PC', 'Menyediakan Jasa')">
+                            <i class="fa-solid fa-comments"></i> Konsultasi Sekarang
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Jasa Offline 2: Instalasi OS / Windows -->
+                <div class="service-card highlight-card" data-category="offline">
+                    <div class="service-badge offline-badge"><i class="fa-solid fa-shop"></i> Layanan Di Tempat</div>
+                    <div class="service-icon-box">
+                        <i class="fa-brands fa-windows"></i>
+                    </div>
+                    <h3 class="service-title">Instalasi OS / Windows</h3>
+                    <p class="service-desc">Pemasangan sistem operasi Windows 10 & 11 versi terbaru, instal driver resmi
+                        motherboard/GPU, serta paket aplikasi kantor dan multimedia siap pakai.</p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-check"></i> Bebas Malware & Bloatware</li>
+                        <li><i class="fa-solid fa-check"></i> Bonus Office, PDF Reader & Antivirus</li>
+                        <li><i class="fa-solid fa-check"></i> Backup Data Aman Sebelum Instal</li>
+                    </ul>
+                    <div class="service-card-action">
+                        <button class="btn btn-primary btn-full"
+                            onclick="openOrderModal('Instalasi OS/Windows', 'Menyediakan Jasa')">
+                            <i class="fa-solid fa-screwdriver-wrench"></i> Jadwalkan Servis
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Jasa Offline 3: Print dan Jilid -->
+                <div class="service-card highlight-card" data-category="offline">
+                    <div class="service-badge offline-badge"><i class="fa-solid fa-shop"></i> Layanan Di Tempat</div>
+                    <div class="service-icon-box">
+                        <i class="fa-solid fa-print"></i>
+                    </div>
+                    <h3 class="service-title">Print dan Jilid</h3>
+                    <p class="service-desc">Layanan cetak dokumen hitam putih dan warna kualitas tinggi, cetak foto,
+                        jilid lakban, jilid spiral kawat/plastik, serta laminating rapi.</p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-check"></i> Kertas 70gr, 80gr, Glossy & Buffalo</li>
+                        <li><i class="fa-solid fa-check"></i> Pengerjaan Satset & Hasil Presisi</li>
+                        <li><i class="fa-solid fa-check"></i> Cocok untuk Skripsi & Laporan Kerja</li>
+                    </ul>
+                    <div class="service-card-action">
+                        <button class="btn btn-primary btn-full"
+                            onclick="openOrderModal('Print dan Jilid', 'Menyediakan Jasa')">
+                            <i class="fa-solid fa-print"></i> Cetak Sekarang
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ATK Section -->
+    <section class="section atk-section" id="atk">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-badge">Alat Tulis Kantor & Sekolah</span>
+                <h2 class="section-title">Katalog Toko ATK</h2>
+                <p class="section-subtitle">Temukan perlengkapan kantor, kuliah, dan kebutuhan belajar terlengkap dengan
+                    harga bersahabat di Banjarmasin.</p>
+            </div>
+
+            <!-- Search and Filter Bar -->
+            <div class="catalog-controls">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="atkSearchInput"
+                        placeholder="Cari barang ATK (misal: Kertas, Pulpen, Binder)...">
+                </div>
+                <div class="filter-pills" id="atkFilterPills">
+                    <button class="pill-btn active" data-atk-category="all">Semua ATK</button>
+                    <button class="pill-btn" data-atk-category="kertas">Kertas & Buku</button>
+                    <button class="pill-btn" data-atk-category="alat-tulis">Alat Tulis</button>
+                    <button class="pill-btn" data-atk-category="arsip">Arsip & Organisasi</button>
+                    <button class="pill-btn" data-atk-category="aksesoris">Aksesoris Komputer</button>
+                </div>
+            </div>
+
+            <!-- ATK Product Grid -->
+            <div class="products-grid" id="atkProductsGrid">
+                <!-- Javascript renders dynamic products, with full fallback data -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Makanan & Minuman Section (IDs support both #makanan-minuman and #kuliner) -->
+    <section class="section food-section" id="makanan-minuman">
+        <span id="kuliner" style="position: relative; top: -80px;"></span>
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-badge">Cafe & Refreshment Corner</span>
+                <h2 class="section-title">Makanan & Minuman</h2>
+                <p class="section-subtitle">Nikmati hidangan cemilan hangat dan minuman segar saat Anda menunggu
+                    pengerjaan servis atau tugas cetak di outlet kami.</p>
+            </div>
+
+            <!-- Category Pills for F&B -->
+            <div class="fnb-tabs">
+                <button class="pill-btn active" data-fnb-category="all">
+                    <i class="fa-solid fa-utensils"></i> Semua Menu
+                </button>
+                <button class="pill-btn" data-fnb-category="kopi">
+                    <i class="fa-solid fa-mug-hot"></i> Aneka Kopi
+                </button>
+                <button class="pill-btn" data-fnb-category="non-kopi">
+                    <i class="fa-solid fa-wine-glass"></i> Minuman Segar
+                </button>
+                <button class="pill-btn" data-fnb-category="makanan">
+                    <i class="fa-solid fa-burger"></i> Makanan & Cemilan
+                </button>
+            </div>
+
+            <!-- F&B Items Grid -->
+            <div class="fnb-grid" id="fnbGrid">
+                <!-- Javascript dynamically renders F&B items -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Dokumentasi Section -->
+    <section class="section doc-section" id="dokumentasi">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-badge">Galeri & Portofolio</span>
+                <h2 class="section-title">Dokumentasi Kegiatan & Proyek</h2>
+                <p class="section-subtitle">Bukti hasil pengerjaan proyek digital, servis komputer, operasional
+                    percetakan, dan suasana nyaman di lokasi kami.</p>
+            </div>
+
+            <!-- Documentation Filter -->
+            <div class="doc-filter">
+                <button class="pill-btn active" data-doc-filter="all">Semua Foto</button>
+                <button class="pill-btn" data-doc-filter="it">Proyek IT & Desain</button>
+                <button class="pill-btn" data-doc-filter="servis">Servis & Hardware</button>
+                <button class="pill-btn" data-doc-filter="outlet">Suasana Toko & Print</button>
+            </div>
+
+            <!-- Documentation Gallery Grid -->
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Rendered dynamically via JS for lightbox interaction -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Lokasi Section -->
+    <section class="section location-section" id="lokasi">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-badge">Kunjungi Kami</span>
+                <h2 class="section-title">Lokasi & Kontak Layanan</h2>
+                <p class="section-subtitle">Kami berlokasi di area strategis Banjarmasin Utara, sangat mudah dijangkau
+                    dari kampus dan pusat perkantoran.</p>
+            </div>
+
+            <div class="location-grid">
+                <!-- Location Details Card -->
+                <div class="location-card">
+                    <div class="location-badge">
+                        <i class="fa-solid fa-map-location-dot"></i> Alamat Resmi Outlet
+                    </div>
+                    <h3 class="location-title">IT Solution Hub Banjarmasin</h3>
+
+                    <div class="address-box">
+                        <div class="address-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="address-text">
+                            <strong>Alamat Lengkap:</strong>
+                            <p id="fullAddressText">Banjarmasin, Jalan. Adhyaksa No.02, Sungai Miai, Kec. Banjarmasin
+                                Utara, Kalimantan Selatan k.pos 70123</p>
+                            <button class="btn-copy" onclick="copyAddress()" id="copyAddressBtn">
+                                <i class="fa-regular fa-copy"></i> Salin Alamat
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="contact-details-list">
+                        <div class="contact-item">
+                            <div class="c-icon"><i class="fa-solid fa-clock"></i></div>
+                            <div>
+                                <strong>Jam Operasional:</strong>
+                                <p>Senin – Sabtu: 08.00 – 22.00 WITA<br>Minggu: 10.00 – 20.00 WITA</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="c-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                            <div>
+                                <strong>WhatsApp Hotline:</strong>
+                                <p>+62 851-9414-8533 (Fast Response CS)</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="c-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <strong>Email Layanan:</strong>
+                                <p>itsolution.banjarmasin@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="location-cta-group">
+                        <a href="https://maps.google.com/?q=Jalan+Adhyaksa+No.02+Sungai+Miai+Banjarmasin+Utara"
+                            target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <i class="fa-solid fa-diamond-turn-right"></i> Petunjuk Arah (Google Maps)
+                        </a>
+                        <button class="btn btn-outline" onclick="openOrderModal('Konsultasi Lokasi')">
+                            <i class="fa-brands fa-whatsapp"></i> Chat WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Map & Interactive Quick Message Form -->
+                <div class="map-and-form-card">
+                    <!-- Google Maps Embed -->
+                    <div class="map-wrapper">
+                        <iframe title="Peta Lokasi IT Solution Banjarmasin"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.1530960579975!2d114.5878893749717!3d-3.3122119966624996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de423b49abebaa9%3A0xe54eefd1d3ca01f9!2sJl.%20Adhyaksa%2C%20Sungai%20Miai%2C%20Kec.%20Banjarmasin%20Utara%2C%20Kota%20Banjarmasin%2C%20Kalimantan%20Selatan!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+                            width="100%" height="240" style="border:0; border-radius: 14px;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                    <!-- Direct Quick Inquiry Form -->
+                    <div class="quick-form-box">
+                        <h4><i class="fa-solid fa-bolt"></i> Kirim Pesan Cepat</h4>
+                        <p class="form-desc">Pesan akan otomatis diteruskan ke WhatsApp staf kami.</p>
+                        <form id="quickContactForm" onsubmit="handleQuickFormSubmit(event)">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="qName">Nama Anda</label>
+                                    <input type="text" id="qName" required placeholder="Contoh: Rian Pratama">
+                                </div>
+                                <div class="form-group">
+                                    <label for="qCategory">Keperluan Layanan</label>
+                                    <select id="qCategory" required>
+                                        <option value="Jasa Online">Jasa Online (Web, Desain, dll)</option>
+                                        <option value="Servis Laptop/PC">Servis Laptop / PC</option>
+                                        <option value="Instalasi Windows">Instalasi OS / Windows</option>
+                                        <option value="Print dan Jilid">Print & Jilid</option>
+                                        <option value="Pemesanan ATK">Beli Produk ATK</option>
+                                        <option value="Makanan & Minuman">Order Makanan / Minuman</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="qMessage">Catatan / Detail Kebutuhan</label>
+                                <textarea id="qMessage" rows="2"
+                                    placeholder="Tuliskan detail pesanan atau pertanyaan Anda..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">
+                                <i class="fa-brands fa-whatsapp"></i> Kirim Langsung ke WhatsApp
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon"><i class="fa-solid fa-microchip"></i></div>
+                        <div class="logo-text">
+                            <span class="brand-name">IT SOLUTION<span class="highlight">.</span></span>
+                            <span class="brand-sub">Banjarmasin Tech & Creative</span>
+                        </div>
+                    </div>
+                    <p class="footer-text">
+                        Mitra terdepan untuk pengembangan web, desain grafis, editing multimedia, servis komputer, alat
+                        tulis kantor, serta tempat bersantai dengan hidangan lezat di Banjarmasin Utara.
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Navigasi Singkat</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fa-solid fa-angle-right"></i> Home</a></li>
+                        <li><a href="#it-solution"><i class="fa-solid fa-angle-right"></i> IT Solution</a></li>
+                        <li><a href="#atk"><i class="fa-solid fa-angle-right"></i> Katalog ATK</a></li>
+                        <li><a href="#makanan-minuman"><i class="fa-solid fa-angle-right"></i> Makanan & Minuman</a>
+                        </li>
+                        <li><a href="#dokumentasi"><i class="fa-solid fa-angle-right"></i> Dokumentasi</a></li>
+                        <li><a href="#lokasi"><i class="fa-solid fa-angle-right"></i> Lokasi Toko</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Layanan Unggulan</h4>
+                    <ul class="footer-links">
+                        <li><a href="#it-solution" onclick="filterServices('online')"><i
+                                    class="fa-solid fa-angle-right"></i> Pembuatan Web Sederhana</a></li>
+                        <li><a href="#it-solution" onclick="filterServices('online')"><i
+                                    class="fa-solid fa-angle-right"></i> Desain Grafis & Video</a></li>
+                        <li><a href="#it-solution" onclick="filterServices('offline')"><i
+                                    class="fa-solid fa-angle-right"></i> Konsultasi & Servis PC</a></li>
+                        <li><a href="#it-solution" onclick="filterServices('offline')"><i
+                                    class="fa-solid fa-angle-right"></i> Instalasi OS / Windows</a></li>
+                        <li><a href="#it-solution" onclick="filterServices('offline')"><i
+                                    class="fa-solid fa-angle-right"></i> Print Warna & Jilid</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Outlet Banjarmasin</h4>
+                    <p class="footer-address">
+                        <i class="fa-solid fa-location-dot"></i> Jalan. Adhyaksa No.02, Sungai Miai, Kec. Banjarmasin
+                        Utara, Kalimantan Selatan 70123
+                    </p>
+                    <p class="footer-address">
+                        <i class="fa-solid fa-phone"></i> +62 851-9414-8533
+                    </p>
+                    <div class="footer-social-icons">
+                        <a href="https://wa.me/6285194148533" target="_blank" rel="noopener" aria-label="WhatsApp"><i
+                                class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok"><i
+                                class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exact User Requirement Footer Text -->
+            <div class="footer-bottom">
+                <p class="copyright-text">2026. All dibawah lindungan Hak cipta.</p>
+                <div class="footer-bottom-links">
+                    <span>Designed with Modern Tech Stack (HTML5, CSS3, Vanilla JS)</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Universal Order / Inquiry Modal -->
+    <div class="modal-backdrop" id="orderModal">
+        <div class="modal-box">
+            <button class="modal-close-btn" onclick="closeOrderModal()" aria-label="Tutup modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-header">
+                <div class="modal-badge"><i class="fa-solid fa-cart-shopping"></i> Formulir Pemesanan</div>
+                <h3 class="modal-title" id="modalServiceTitle">Pesan Layanan / Produk</h3>
+                <p class="modal-subtitle">Isi data di bawah ini, pesanan Anda akan terformat rapi dan diteruskan
+                    langsung ke WhatsApp kami.</p>
+            </div>
+            <form id="orderForm" onsubmit="handleOrderSubmit(event)">
+                <input type="hidden" id="orderItemName" value="">
+                <input type="hidden" id="orderItemCategory" value="">
+
+                <div class="form-group">
+                    <label for="custName">Nama Lengkap <span class="req">*</span></label>
+                    <input type="text" id="custName" required placeholder="Masukkan nama Anda">
+                </div>
+
+                <div class="form-group">
+                    <label for="custPhone">Nomor WhatsApp <span class="req">*</span></label>
+                    <input type="tel" id="custPhone" required placeholder="Contoh: 081234567890">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="orderQty">Jumlah / Kuantitas</label>
+                        <input type="number" id="orderQty" min="1" value="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="orderDelivery">Opsi Layanan</label>
+                        <select id="orderDelivery">
+                            <option value="Ambil di Tempat / Datang ke Toko">Ambil di Tempat (Outlet Adhyaksa)</option>
+                            <option value="Layanan Online / Remote">Layanan Online / Remote</option>
+                            <option value="Kirim via Ojek Online (Banjarmasin)">Kirim via Ojek Online</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="custNotes">Detail / Catatan Tambahan</label>
+                    <textarea id="custNotes" rows="3"
+                        placeholder="Contoh: Butuh web profil 3 halaman, atau print jilid 50 lembar, atau catatan pesanan lainnya..."></textarea>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-outline" onclick="closeOrderModal()">Batal</button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa-brands fa-whatsapp"></i> Konfirmasi & Kirim WA
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Slide-in Cart Drawer -->
+    <div class="cart-drawer-overlay" id="cartOverlay" onclick="closeCart()"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <h3><i class="fa-solid fa-bag-shopping"></i> Keranjang Belanja</h3>
+            <button class="cart-close-btn" onclick="closeCart()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-drawer-body" id="cartItemsList">
+            <!-- Dynamic Cart Items -->
+            <div class="empty-cart-state">
+                <i class="fa-solid fa-cart-arrow-down"></i>
+                <p>Keranjang masih kosong.</p>
+                <small>Silakan pilih barang ATK atau Makanan & Minuman di atas.</small>
+            </div>
+        </div>
+        <div class="cart-drawer-footer" id="cartFooter">
+            <div class="cart-total-row">
+                <span>Estimasi Total:</span>
+                <strong id="cartTotalPrice">Rp 0</strong>
+            </div>
+            <button class="btn btn-primary btn-full" onclick="checkoutCartWhatsApp()">
+                <i class="fa-brands fa-whatsapp"></i> Checkout via WhatsApp
+            </button>
+            <button class="btn-clear-cart" onclick="clearCart()">Kosongkan Keranjang</button>
+        </div>
+    </div>
+
+    <!-- Image Lightbox Modal for Documentation -->
+    <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()"><i class="fa-solid fa-xmark"></i></button>
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
+                alt="Dokumentasi Full" id="lightboxImg">
+            <div class="lightbox-caption" id="lightboxCaption">
+                <h4>Judul Dokumentasi</h4>
+                <p>Keterangan proyek</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Action WhatsApp Button -->
+    <a href="https://wa.me/6285194148533?text=Halo%20IT%20Solution%20Banjarmasin,%20saya%20ingin%20konsultasi/pesan%20layanan"
+        target="_blank" rel="noopener" class="floating-wa" title="Chat WhatsApp Kami" aria-label="Chat WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="floating-tooltip">Chat Kami Sekarang</span>
+    </a>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toastNotification">
+        <i class="fa-solid fa-circle-check" id="toastIcon"></i>
+        <span id="toastMessage">Notifikasi berhasil!</span>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+
+</html>
